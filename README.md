@@ -52,7 +52,7 @@ When using the email checker, verify that the file name and path are correct and
 - **Domain Input**: Ensure the domain format is correct (e.g., @gmail.com).
 
 ## ⚠️ Warning
-Please use this tool responsibly. Generating fake emails for malicious purposes or spamming is not encouraged and may violate terms of service of various platforms. Ensure you have the right to use any domain names and email addresses generated. Misuse of this tool could result in legal consequences.
+This tool should be used only for ethical and legal purposes. Generating fake emails for spamming, fraudulent activities, or any actions that breach terms of service is not permitted. Make sure you have the necessary permissions to use any domain names or email addresses. Misuse of this tool can result in severe legal consequences and is contrary to responsible use guidelines.
 
 ## 📜 License
 This project is licensed under the GNU General Public License. See the [LICENSE](https://github.com/RozhakXD/FakeMail?tab=GPL-3.0-1-ov-file) file for details.
