@@ -2,7 +2,7 @@
 
 ![TextPro me_166c9d2163300e (1)](https://github.com/user-attachments/assets/0bac1622-7077-4f9e-96b6-bd0b58432ee3)
 
-**FakeMail** is a Python program designed to generate random and fake emails using various methods. It offers a simple and intuitive menu for users to create emails from different sources, check email validity, and more.
+[**FakeMail**](https://github.com/user-attachments/assets/633e658e-9e60-4525-972f-2c5b2948f44f) is a Python program designed to generate random and fake emails using various methods. It offers a simple and intuitive menu for users to create emails from different sources, check email validity, and more.
 
 ## 🚀 Features
 - **Create Email from Names**: Generate emails using real names.
