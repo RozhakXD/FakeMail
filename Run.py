@@ -12,6 +12,7 @@ except (ModuleNotFoundError) as e:
 
 LIVE, LOOPING, DIE, UNKNOWN = [], 0, [], []
 
+
 class FITUR:
     def __init__(self) -> None:
         pass
@@ -150,7 +151,16 @@ class FITUR:
                             )
                         )
                         for EMAIL in open(self.FILE_NAME, "r").read().splitlines():
-                            CHECKER().EMAIL([f"{EMAIL}"], self.FILE_LIVE, self.FILE_DIE)
+                            try:
+                                CHECKER().EMAIL(
+                                    [f"{EMAIL}"], self.FILE_LIVE, self.FILE_DIE
+                                )
+                            except (KeyboardInterrupt):
+                                printf(
+                                    f"\r                                       ",
+                                    end="\r",
+                                )
+                                break
                         printf(
                             Panel(
                                 f"[bold white]Congratulations, you have successfully obtained[bold green] {len(LIVE)}[bold white] live emails and[bold red] {len(DIE)}[bold white] dead emails, all results have been saved in[bold yellow] {self.FILE_LIVE}[bold white] and[bold yellow] {self.FILE_DIE}[bold white]!",
@@ -228,6 +238,7 @@ class FITUR:
             )
         )
         return False
+
 
 class CHECKER:
     def __init__(self) -> None:
@@ -316,6 +327,12 @@ class CHECKER:
                                 DIE.append(f"{EMAIL}")
                                 open(file_die, "a+").write(f"{EMAIL}\n")
                                 break
+                            elif "Invalid credentials" in str(response2.text):
+                                printf(
+                                    f"[bold bright_black]   ──>[bold yellow] TURN ON AIRPLANE MODE FOR ONE SECOND!",
+                                    end="\r",
+                                )
+                                time.sleep(7.5)
                             else:
                                 UNKNOWN.append(f"{EMAIL}")
                                 continue
@@ -339,6 +356,7 @@ class CHECKER:
         except (Exception) as e:
             printf(f"[bold bright_black]   ──>[bold red] {str(e).upper()}!", end="\r")
             time.sleep(5.5)
+
 
 class EMAILS:
     def __init__(self) -> None:
@@ -485,6 +503,7 @@ class EMAILS:
             W.write("")
         W.close()
         return f"Temporary/{self.RANDOM_FILE_NAME}"
+
 
 if __name__ == "__main__":
     try:
