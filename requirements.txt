@@ -1,0 +1,6 @@
+requests
+mimesis
+rich
+faker
+names
+randomuser
