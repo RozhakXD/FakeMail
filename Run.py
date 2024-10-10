@@ -31,8 +31,8 @@ class FITUR:
 [bold green]07[bold white]. Keluar ([bold red]Exit[bold white])""",
                     style="bold bright_black",
                     width=59,
-                    title="> [Fitur Utama] <",
-                    subtitle="╭───────",
+                    title="[bold bright_black]> [Fitur Utama] <",
+                    subtitle="[bold bright_black]╭───────",
                     subtitle_align="left",
                 )
             )
@@ -43,8 +43,8 @@ class FITUR:
                         f"[bold white]Please fill in the domain, you are free to use any domain, for example:[bold green] @gmail.com[bold white]\n*make sure you only fill in one domain, no more!",
                         style="bold bright_black",
                         width=59,
-                        title="> [Domain] <",
-                        subtitle="╭───────",
+                        title="[bold bright_black]> [Domain] <",
+                        subtitle="[bold bright_black]╭───────",
                         subtitle_align="left",
                     )
                 )
@@ -55,8 +55,8 @@ class FITUR:
                             f"[bold white]Please fill in the desired amount to dump emails, make sure the amount is more than 100, for\nexample:[bold green] 1000[bold white] *[bold red]remember to only fill in numbers[bold white]!",
                             style="bold bright_black",
                             width=59,
-                            title="> [Jumlah Email] <",
-                            subtitle="╭───────",
+                            title="[bold bright_black]> [Jumlah Email] <",
+                            subtitle="[bold bright_black]╭───────",
                             subtitle_align="left",
                         )
                     )
@@ -67,7 +67,7 @@ class FITUR:
                                 f"[bold white]Creating fake email, please wait a moment and you can use[bold green] CTRL + C[bold white] to stop, do not use[bold red] CTRL + Z[bold white],\nif an error occurs please check the response log!",
                                 style="bold bright_black",
                                 width=59,
-                                title="> [Catatan] <",
+                                title="[bold bright_black]> [Catatan] <",
                             )
                         )
                         self.FILE_NAME = EMAILS().GENERATE_RANDOM_FILENAME()
@@ -97,7 +97,7 @@ class FITUR:
                                     f"[bold white]Successfully created a fake email and we managed to save it in[bold green] {self.FILE_NAME}",
                                     style="bold bright_black",
                                     width=59,
-                                    title="> [Sukses] <",
+                                    title="[bold bright_black]> [Sukses] <",
                                 )
                             )
                             sys.exit()
@@ -107,7 +107,7 @@ class FITUR:
                                     f"[bold red]Failed to create fake email, please try again and make sure there is a Temporary folder!",
                                     style="bold bright_black",
                                     width=59,
-                                    title="> [Gagal] <",
+                                    title="[bold bright_black]> [Gagal] <",
                                 )
                             )
                             sys.exit()
@@ -117,7 +117,7 @@ class FITUR:
                                 f"[bold red]You entered too few numbers, please fill in at least more than 100 emails for optimal results!",
                                 style="bold bright_black",
                                 width=59,
-                                title="> [Jumlah Salah] <",
+                                title="[bold bright_black]> [Jumlah Salah] <",
                             )
                         )
                         sys.exit()
@@ -127,8 +127,8 @@ class FITUR:
                         f"[bold white]You must fill in the name of the file you want to check whether the email is valid or not, for example:[bold green] Temporary/Example.txt[bold white] *make sure the file is available!",
                         style="bold bright_black",
                         width=59,
-                        title="> [Nama File] <",
-                        subtitle="╭───────",
+                        title="[bold bright_black]> [Nama File] <",
+                        subtitle="[bold bright_black]╭───────",
                         subtitle_align="left",
                     )
                 )
@@ -147,7 +147,7 @@ class FITUR:
                                 f"[bold white]You can wait for a few minutes, if there is an error, the service is probably not working properly.\nWe recommend registering with Gmail to make it work!",
                                 style="bold bright_black",
                                 width=59,
-                                title="> [Catatan] <",
+                                title="[bold bright_black]> [Catatan] <",
                             )
                         )
                         for EMAIL in open(self.FILE_NAME, "r").read().splitlines():
@@ -166,7 +166,7 @@ class FITUR:
                                 f"[bold white]Congratulations, you have successfully obtained[bold green] {len(LIVE)}[bold white] live emails and[bold red] {len(DIE)}[bold white] dead emails, all results have been saved in[bold yellow] {self.FILE_LIVE}[bold white] and[bold yellow] {self.FILE_DIE}[bold white]!",
                                 style="bold bright_black",
                                 width=59,
-                                title="> [Selesai] <",
+                                title="[bold bright_black]> [Selesai] <",
                             )
                         )
                         sys.exit()
@@ -176,7 +176,7 @@ class FITUR:
                                 f"[bold red]The file you entered is empty, please use another file and make sure it contains an email list!",
                                 style="bold bright_black",
                                 width=59,
-                                title="> [File Kosong] <",
+                                title="[bold bright_black]> [File Kosong] <",
                             )
                         )
                         sys.exit()
@@ -186,7 +186,7 @@ class FITUR:
                             f"[bold red]The file name you entered is not available, please try again and fill in the file name correctly!",
                             style="bold bright_black",
                             width=59,
-                            title="> [File Tidak Ada] <",
+                            title="[bold bright_black]> [File Tidak Ada] <",
                         )
                     )
                     sys.exit()
@@ -196,7 +196,7 @@ class FITUR:
                         f"[bold white]You have selected the exit option, thank you for using this program, hope you enjoy it!",
                         style="bold bright_black",
                         width=59,
-                        title="> [Keluar] <",
+                        title="[bold bright_black]> [Keluar] <",
                     )
                 )
                 sys.exit()
@@ -206,7 +206,7 @@ class FITUR:
                         f"[bold red]The option you selected is not in the features, please try again and see the features list!",
                         style="bold bright_black",
                         width=59,
-                        title="> [Pilihan Salah] <",
+                        title="[bold bright_black]> [Pilihan Salah] <",
                     )
                 )
                 time.sleep(4.5)
@@ -217,7 +217,7 @@ class FITUR:
                     f"[bold red]{str(e).capitalize()}!",
                     style="bold bright_black",
                     width=59,
-                    title="> [Error] <",
+                    title="[bold bright_black]> [Error] <",
                 )
             )
             sys.exit()
@@ -226,7 +226,7 @@ class FITUR:
         os.system("cls" if os.name == "nt" else "clear")
         printf(
             Panel(
-                f"""[bold red]    ______    _          __  __       _ _           
+                r"""[bold red]    ______    _          __  __       _ _           
    |  ____|  | |        |  \/  |     (_) |          
    | |__ __ _| | _____  | \  / | __ _ _| | ___ _ __ 
    |  __/ _` | |/ / _ \ | |\/| |/ _` | | |/ _ \ '__|
@@ -300,7 +300,7 @@ class CHECKER:
 [bold white]Type :[bold yellow] {str(self.TYPE).upper()}""",
                                         style="bold bright_black",
                                         width=59,
-                                        title="[bold bright_black]> [[bold green]Live[bold bright_black]] <",
+                                        title="[bold bright_black][bold bright_black]> [[bold green]Live[bold bright_black]] <",
                                     )
                                 )
                                 LIVE.append(f"{EMAIL}")
@@ -321,7 +321,7 @@ class CHECKER:
 [bold white]Type :[bold yellow] {str(self.TYPE).upper()}""",
                                         style="bold bright_black",
                                         width=59,
-                                        title="[bold bright_black]> [[bold red]Die[bold bright_black]] <",
+                                        title="[bold bright_black][bold bright_black]> [[bold red]Die[bold bright_black]] <",
                                     )
                                 )
                                 DIE.append(f"{EMAIL}")
@@ -515,7 +515,7 @@ if __name__ == "__main__":
                 f"[bold red]{str(e).capitalize()}!",
                 style="bold bright_black",
                 width=59,
-                title="> [Error] <",
+                title="[bold bright_black]> [Error] <",
             )
         )
         sys.exit()
